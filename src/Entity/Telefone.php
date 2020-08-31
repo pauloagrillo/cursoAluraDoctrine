@@ -18,6 +18,10 @@ Class Telefone
      * @Column(type="string")
      */
     private $numero;
+    /**
+     * ManyToOne(targetEntity="Aluno")
+     */
+    private $aluno;
 
     public function getNumero():string
     {
@@ -40,6 +44,18 @@ Class Telefone
     {
         $this->id = $id;
 
+        return $this;
+    }
+ 
+    public function getAluno(): Aluno
+    {
+        return $this->aluno;
+    }
+
+    public function setAluno(Aluno $aluno): self
+    {
+        $this->aluno = $aluno;
+        
         return $this;
     }
 }

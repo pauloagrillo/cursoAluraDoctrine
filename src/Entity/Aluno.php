@@ -21,7 +21,7 @@ class Aluno
      */
     private $nome;
     /**
-     * @OneToMany(targetEntity="Telefone",mappedBy="aluno")
+     * @OneToMany(targetEntity="Telefone", mappedBy="aluno")
      */
     private $telefones;
 
